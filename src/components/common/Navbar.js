@@ -8,6 +8,7 @@ import signout from "../../assets/signout.svg";
 import faqs from "../../assets/faqs.svg";
 import favourite from "../../assets/favourite.svg";
 import profile from "../../assets/profile.svg";
+import ListProperty from "../../pages/ListProperty";
 import ConfirmationModal from "./ConfirmationModel";
 import { logout } from "../../services/operations/authAPI";
 
@@ -154,7 +155,17 @@ function Navbar() {
                 path={"/dashboard/my-profile"}
               />
 
-              <DropdownItem img={faqs} text={"FAQs"} path={"/dashboard/FAQs"} />
+              {/* <DropdownItem
+                img={profile}
+                text={"My Properties"}
+                path={"/dashboard/myListing"}
+              /> */}
+
+              <DropdownItem
+                img={profile}
+                text={"List Property"}
+                path={"/dashboard/ListProperty"}
+              />
 
               <DropdownItem
                 img={faqs}
