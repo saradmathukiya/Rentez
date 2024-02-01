@@ -14,6 +14,7 @@ import MyProfile from "./pages/MyProfile";
 import FAQs from "./pages/FAQs";
 import Favorites from "./pages/Favorites";
 import Partner from "./pages/Partner";
+import ListProperty from "./pages/ListProperty";
 function App() {
   return (
     <div className="App">
@@ -83,7 +84,7 @@ function App() {
         />
 
         <Route
-          path="/dashboard/Settings"
+          path="/dashboard/settings"
           element={
             <PrivateRoute>
               <Settings />
@@ -114,6 +115,24 @@ function App() {
           element={
             <PrivateRoute>
               <FAQs />
+            </PrivateRoute>
+          }
+        />
+
+        {/* <Route
+          path="/dashboard/myListing"
+          element={
+            <PrivateRoute>
+              <myListing />
+            </PrivateRoute>
+          }
+        /> */}
+
+        <Route
+          path="/dashboard/ListProperty"
+          element={
+            <PrivateRoute>
+              <ListProperty />
             </PrivateRoute>
           }
         />

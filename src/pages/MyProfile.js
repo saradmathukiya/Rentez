@@ -4,6 +4,7 @@ import { RiEditBoxLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import IconBtn from "../components/common/IconBtn";
+import { formattedDate } from "../utils/dateFormatter";
 
 export default function MyProfile() {
   const { user } = useSelector((state) => state.profile);
@@ -96,10 +97,10 @@ export default function MyProfile() {
             </div>
             <div className="detail">
               <p className="label">Date Of Birth</p>
-              {/* <p className="value">
+              <p className="value">
                 {formattedDate(user?.additionalDetails?.dateOfBirth) ??
                   "Add Date Of Birth"}
-              </p> */}
+              </p>
             </div>
           </div>
         </div>

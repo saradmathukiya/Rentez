@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 import { setLoading, setToken } from "../../slices/authSlice";
 import { setUser } from "../../slices/profileSlice";
 import { apiConnector } from "../apiconnector";
-import { endpoints } from "../api";
+import { endpoints } from "../apis";
 
 const {
   SENDOTP_API,
