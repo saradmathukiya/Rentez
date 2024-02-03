@@ -1,9 +1,15 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-const { auth, isSeller } = require("../middlewares/auth")
+const { auth, isSeller } = require("../middlewares/auth");
 
-const {createListing, getAllListings, getPropertyDetail, deleteListing, notifySeller} = require("../controllers/Property")
+const {
+  createListing,
+  getAllListings,
+  getPropertyDetail,
+  deleteListing,
+  notifySeller,
+} = require("../controllers/Property");
 
 router.post("/createListing", auth, isSeller, createListing);
 

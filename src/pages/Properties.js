@@ -3,9 +3,9 @@ import Card from "../components/common/Card";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-import { getSellersListings } from "../services/operations/propertyAPI";
+import { getAllProperty } from "../services/operations/propertyAPI";
 
-const MyListing = () => {
+const Properties = () => {
   const [properties, setProperties] = useState([]);
   const { token } = useSelector((state) => state.auth);
   const [loading, setLoading] = useState(true);
@@ -13,7 +13,8 @@ const MyListing = () => {
   useEffect(() => {
     const getProperty = async () => {
       setLoading(true);
-      const result = await getSellersListings(token);
+      const result = await getAllProperty();
+      console.log(result);
       if (result) {
         setProperties(result);
       }
@@ -36,7 +37,7 @@ const MyListing = () => {
                 return (
                   <Card
                     key={index}
-                    isSeller="true"
+                    isSeller={false}
                     propertyId={property._id}
                     img={property.thumbnail}
                     bhk={property.bhk}
@@ -58,4 +59,4 @@ const MyListing = () => {
   );
 };
 
-export default MyListing;
+export default Properties;

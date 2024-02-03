@@ -3,3 +3,8 @@ export const ACCOUNT_TYPE = {
   SELLER: "Seller",
   ADMIN: "Admin",
 };
+
+export const PROPERTY_STATUS = {
+  DRAFT: "Draft",
+  PUBLISHED: "Published",
+};

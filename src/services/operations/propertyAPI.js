@@ -19,7 +19,7 @@ export const getAllProperty = async (filterData) => {
       GET_ALL_LISTINGS_API,
       null,
       null,
-      filterData
+      { filterData }
     );
 
     if (!response.data.success) {
@@ -54,6 +54,7 @@ export const createListings = async (token, formData) => {
   // return async (dispatch) => {
   try {
     // dispatch(setLoading(true));
+    // console.log(formData);
     const response = await apiConnector("POST", CREATE_LISTING_API, formData, {
       Authorization: `Bearer ${token}`,
     });

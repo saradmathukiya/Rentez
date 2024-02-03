@@ -15,12 +15,18 @@ import FAQs from "./pages/FAQs";
 import Favorites from "./pages/Favorites";
 import Partner from "./pages/Partner";
 import ListProperty from "./pages/ListProperty";
+import MyListing from "./pages/MyListing";
+import Properties from "./pages/Properties";
+import PropertyDetail from "./pages/PropertyDetail";
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+
+        <Route path="/properties" element={<Properties />} />
+        <Route path="/property/:propertyId" element={<PropertyDetail />} />
 
         <Route
           path="signup"
@@ -119,14 +125,14 @@ function App() {
           }
         />
 
-        {/* <Route
-          path="/dashboard/myListing"
+        <Route
+          path="/dashboard/MyListing"
           element={
             <PrivateRoute>
-              <myListing />
+              <MyListing />
             </PrivateRoute>
           }
-        /> */}
+        />
 
         <Route
           path="/dashboard/ListProperty"
