@@ -9,6 +9,7 @@ import faqs from "../../assets/faqs.svg";
 import favourite from "../../assets/favourite.svg";
 import profile from "../../assets/profile.svg";
 import ListProperty from "../../pages/ListProperty";
+import MyListing from "../../pages/MyListing";
 import ConfirmationModal from "./ConfirmationModel";
 import { logout } from "../../services/operations/authAPI";
 
@@ -58,7 +59,9 @@ function Navbar() {
         <div className="nav-right flex">
           <nav className="nav">
             <ul className="nav-links flex">
-              <li>Home</li>
+              <Link to="/properties">
+                <li>Properties</li>
+              </Link>
               <li>About Us</li>
             </ul>
           </nav>
@@ -155,11 +158,11 @@ function Navbar() {
                 path={"/dashboard/my-profile"}
               />
 
-              {/* <DropdownItem
+              <DropdownItem
                 img={profile}
-                text={"My Properties"}
-                path={"/dashboard/myListing"}
-              /> */}
+                text={"My Property"}
+                path={"/dashboard/MyListing"}
+              />
 
               <DropdownItem
                 img={profile}

@@ -1422,6 +1422,101 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 
 
+/* daf2 */
+/* card css */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  margin: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-img{
+  display: flex;
+}
+
+.card-img img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 16px;
+  background-color: cyan;
+}
+
+.card-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.card-location {
+  margin-top: 8px;
+  color: #666666;
+}
+
+.card-property-details {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  color: #888888;
+}
+
+.card-property-details span {
+  display: flex;
+  align-items: center;
+}
+
+.card-button,
+.card-delete-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.card-button {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.card-delete-btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.card-button:hover,
+.card-delete-btn:hover {
+  background-color: #2980b9;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
