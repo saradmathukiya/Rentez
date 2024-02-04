@@ -1510,6 +1510,170 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 
 
+/* property detail page */
+
+
+
+/* image slider */
+
+
+
+
+
+
+
+.property-details-container {
+  
+  padding: 0px 100px;
+}
+
+
+.slick-initialized .slick-slide {
+  display: flex !important;
+}
+.slick-slide{
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.property-img-slider {
+  margin-bottom: 20px;
+  background-color: #e8e8e8;
+  /* overflow: hidden; */
+  
+}
+.slider-item{
+  height: 400px;
+  /* background-size: cover; */
+  
+}
+.slider-item {
+  img {
+    object-fit: cover;
+    width: 550px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+}
+.slick-prev::before, .slick-next::before {
+  font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.slick-next::before, .slick-prev::before{
+  color: #000 !important;
+  font-size: 30px !important; 
+  position: relative;
+}
+.slick-prev::before{
+  left: -12px;
+}
+
+
+.property-highlights {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.property-type {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.property-address {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.property-seller {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.property-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.property-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.property-features {
+  display: flex;
+  justify-content: space-between;
+
+  .feature-item {
+    flex: 1;
+    font-size: 16px;
+  }
+}
+
+.property-photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .additional-photo {
+    flex: 0 0 48%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+
+/* home page */
+
+.homepage-bg-image{
+  background-image:
+  linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,0.1972391251422444) 60%), 
+                      url('./assets/h1.webp');
+            width: 100%;
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}
+
+
+.homepage-hero-text{
+  text-align: center;
+  margin-bottom: 250px;
+  
+}
+
+.homepage-hero-text h1{
+  color: white;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 55px;
+  
+}
+
+
 
 
 
