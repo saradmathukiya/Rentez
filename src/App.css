@@ -1455,7 +1455,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 .card-info {
   padding: 16px;
-  background-color: cyan;
+  background-color: white;
 }
 
 .card-price {
@@ -1494,8 +1494,10 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 }
 
 .card-button {
-  background-color: #3498db;
-  color: #ffffff;
+   color: var(--accent-color-dark);
+  border: 1px solid var(--accent-color-dark);
+  /* background-color: var(--accent-color-dark); */
+  
 }
 
 .card-delete-btn {
@@ -1505,9 +1507,18 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 .card-button:hover,
 .card-delete-btn:hover {
-  background-color: #2980b9;
+  background-color: var(--accent-color);
+  color: white;
 }
 
+/* all properties */
+
+.my-listings{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
 /* property detail page */
@@ -1515,11 +1526,6 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 
 /* image slider */
-
-
-
-
-
 
 
 .property-details-container {
@@ -1654,23 +1660,89 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
             width: 100%;
             height: 450px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+}
+.homepage-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .homepage-hero-text{
   text-align: center;
-  margin-bottom: 250px;
+  
   
 }
 
 .homepage-hero-text h1{
   color: white;
-  font-weight: 600;
-  font-size: 48px;
+  font-weight: 500;
+  font-size: 40px;
   line-height: 55px;
   
+}
+.homepage-hero-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 100px;
+}
+
+
+.homepage-hero-form form {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 0 20px;
+}
+.homepage-hero-form form input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.homepage-hero-form form span {
+  font-size: 14px;
+  color: grey;
+}
+input::placeholder {
+  font-size: 17px;
+  color: var(--simple-text-color);
+  
+}
+.homepage-hero-form form input {
+  outline-color: var(--accent-color);/* Change the color to your desired focus color */
+}
+
+
+.homepage-hero-form form .box {
+  padding: 15px;
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+.homepage-hero-form form .box:nth-child(1) {
+  border-left: none;
+}
+.homepage-hero-form form h4 {
+  font-weight: 500;
+}
+
+
+.btn1-hero{
+  
+  margin-top: 27px;
+  background: var(--accent-color);
+  border: none;
+  border-radius: 23px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 13px 34px;
+
 }
 
 
