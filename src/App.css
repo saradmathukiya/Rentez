@@ -15,7 +15,7 @@
     --simple-text-color: #606161;
     --accent-color: #006f80;
     --accent-color-dark: #003740;
-    --padding-inline-section: 20px;
+    --padding-inline-section: 30px;
 }
 
 body {
@@ -49,7 +49,7 @@ ul {
 }
 
 .container {
-    max-width: 1180px;
+    width: 100%;
     margin-inline: auto;
     padding-inline: var(--padding-inline-section);
     overflow: hidden;
@@ -1658,7 +1658,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
   linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,0.1972391251422444) 60%), 
                       url('./assets/h1.webp');
             width: 100%;
-            height: 450px;
+            height: 410px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1744,6 +1744,118 @@ input::placeholder {
   padding: 13px 34px;
 
 }
+
+
+/* button of slider */
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 35px; 
+  border-radius: 8px;
+  border: 0.5px solid var(--accent-color-dark);
+  font-size: 15px;
+   
+  font-weight: 500;
+  color: var(--accent-color-dark);
+  background: var(--primary-text-color);
+    padding: 10px 20px;
+    transition: 0.2s ease-out;
+    text-align: center;
+}
+
+.button:hover{
+  color: white;
+  background-color: var(--accent-color);
+}
+
+.slider-btn-homepage{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+
+/* offer section box */
+
+.offer-section-box{
+  margin-top: 22px;
+  border-radius: 5px;
+  background-color: #E6F1F3;
+  padding: 4px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-section-box h2{
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500; 
+  line-height: 1.5; 
+  color: var(--accent-color);
+}
+.offer-section-box p {
+  text-align: center;
+  font-size: 0.875rem; 
+  font-weight: 500;
+  line-height: 1.5; 
+  color: var(--accent-color);
+}
+
+
+/* featured property section */
+/* featured text */
+.featured-heading {
+  
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  margin-top: 50px;
+  text-align: center;
+}
+.featured-heading h1 {
+  color: #2d3954;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 35px;
+}
+.featured-heading p {
+  color: #72809d;
+}
+
+/* featured */
+.featured .box {
+  box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+  border-radius: 6px;
+  text-align: center;
+  padding: 30px;
+  cursor: pointer;
+}
+.featured img {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+}
+
+/* featured card */
+
+.mtop {
+  margin-top: 50px;
+}
+
+.grid5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+
 
 
 
