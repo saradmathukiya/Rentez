@@ -1745,7 +1745,43 @@ input::placeholder {
 
 }
 
+/* slider above text */
 
+.slider-card{
+  margin: 50px 0;
+}
+
+.slider-card-text-btn{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.slider-card-text{
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 35px;
+  margin-left: 30px;
+}
+
+.slider-card-btn{
+  display: flex;
+  gap: 10px;
+  
+}
+.explore-text{
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500; 
+  line-height: 1.5; 
+  color: var(--accent-color);
+}
+
+.explore-btn{
+  margin-top: 4px;
+
+}
 /* button of slider */
 
 .button{
@@ -1772,6 +1808,7 @@ input::placeholder {
 }
 
 .slider-btn-homepage{
+  margin-left: 900px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -1856,6 +1893,55 @@ input::placeholder {
 }
 
 
+/* why rentez section */
+.whyrentez-section{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.whyrentez-text{
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.whyrentez-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.whyrentez-card1{
+  align-items: center;
+    justify-content: center;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+}
+
+.whyrentez-card1 img{
+     width: 100px;
+     height: 100px;
+     filter: brightness(10%);
+}
+
+.whyrentez-card1-text-heading{
+  font-size: 18px;
+  color: var(--secondary-text-color);
+}
+
+.whyrentez-card1-text-paragraph{
+  font-size: 12px;
+  text-align: center;
+  color: var(--simple-text-color);
+}
 
 
 

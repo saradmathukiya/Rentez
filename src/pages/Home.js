@@ -6,9 +6,13 @@ import Card from "../components/common/Card";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useRef } from "react";
-
+import { FaArrowRightLong } from "react-icons/fa6";
 import { getAllProperty } from "../services/operations/propertyAPI";
 import Featured from "../components/core/featured/Featured";
+import broker from "../assets/broker.png";
+import listing from "../assets/listing.png";
+import house from "../assets/house.png";
+import agreement from "../assets/agreement.png";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
@@ -118,7 +122,16 @@ const Home = () => {
       </section>
 
       <section className="slider-card ">
-        <div className="slider-container container">
+        <div className="slider-card-text-btn container">
+          <div className="slider-card-text">Popular Listings</div>
+          <div className="slider-card-btn">
+            <div className="explore-text">Explore All</div>
+            <div className="explore-btn">
+              <FaArrowRightLong />
+            </div>
+          </div>
+        </div>
+        <div className="slider-container ">
           <Slider
             ref={(slider) => {
               sliderRef = slider;
@@ -152,6 +165,45 @@ const Home = () => {
               Next
             </button>
           </div>
+        </div>
+      </section>
+
+      <section className="whyrentez-section">
+        <div className="whyrentez-text">Why Rentez</div>
+        <div className="whyrentez-card container">
+          <a className="whyrentez-card1">
+            <img src={broker} alt="no broker image" />
+            <div className="whyrentez-card1-text-heading">Avoid Brokers</div>
+            <div className="whyrentez-card1-text-paragraph">
+              We directly connect you to verified owners to save brokerage
+            </div>
+          </a>
+
+          <a className="whyrentez-card1">
+            <img src={listing} alt="no broker image" />
+            <div className="whyrentez-card1-text-heading">Easy Listings</div>
+            <div className="whyrentez-card1-text-paragraph">
+              Easy listing process. Also using WhatsApp
+            </div>
+          </a>
+
+          <a className="whyrentez-card1">
+            <img src={house} alt="no broker image" />
+            <div className="whyrentez-card1-text-heading">
+              Shortlist without Visit
+            </div>
+            <div className="whyrentez-card1-text-paragraph">
+              Extensive information makes it easy
+            </div>
+          </a>
+
+          <a className="whyrentez-card1">
+            <img src={agreement} alt="no broker image" />
+            <div className="whyrentez-card1-text-heading">Rental Agreement</div>
+            <div className="whyrentez-card1-text-paragraph">
+              Assistance in creating Rental agreement & Paper work
+            </div>
+          </a>
         </div>
       </section>
     </>
