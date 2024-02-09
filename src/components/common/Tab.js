@@ -6,8 +6,8 @@ export default function Tab({ tabData, field, setField }) {
           className="tab-button"
           style={
             field === tab.type
-              ? { backgroundColor: "#006f80", borderRadius: "20px" }
-              : { backgroundColor: "white", borderRadius: "20px" }
+              ? { backgroundColor: "#006f80", borderRadius: "10px" }
+              : { backgroundColor: "white", borderRadius: "10px" }
           }
           key={tab.id}
           onClick={() => setField(tab.type)}
