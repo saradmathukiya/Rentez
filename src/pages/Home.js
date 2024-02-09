@@ -193,7 +193,7 @@ const Home = () => {
               Shortlist without Visit
             </div>
             <div className="whyrentez-card1-text-paragraph">
-              Extensive information makes it easy
+              Extensive information makes it Easy
             </div>
           </a>
 

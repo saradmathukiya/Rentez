@@ -31,7 +31,6 @@ const Properties = () => {
           <span className="loader"></span>
         ) : (
           <>
-            <h1>My Listings</h1>
             <div className="my-listings">
               {properties?.map((property, index) => {
                 return (

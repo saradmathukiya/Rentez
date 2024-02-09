@@ -504,11 +504,12 @@ ul {
  width: 100%;
 align-items: center;
 justify-content: center;
-background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 60%, rgba(13,111,129,1) 100%);
+/* background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 60%, rgba(13,111,129,1) 100%); */
 }
 
 /* Form Container Styles */
 .login-form-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   flex-direction: column;
   max-width: 400px;
   padding: 20px;
@@ -535,7 +536,8 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
   border-radius: 0.25rem;
   background-color: var(--primary-text-color); /* Set your desired background color */
   padding: 12px;
-  color: #000000; /* Set your desired text color */
+  color: #000000; 
+  outline-color: var(--accent-color);
 }
 
 /* Password Input Styles */
@@ -548,16 +550,17 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
   margin-bottom: 0.5rem;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  color: var(--secondary-text-color); /* Set your desired text color */
+  color: var(--secondary-text-color); 
 }
 
 .pass-input {
   width: 100%;
   border: 1px solid var(--accent-color);
   border-radius: 0.25rem;
-  background-color: var(--primary-text-color); /* Set your desired background color */
+  background-color: var(--primary-text-color); 
   padding: 12px;
-  color: var(--accent-color-dark); /* Set your desired text color */
+  color: var(--accent-color-dark); 
+  outline-color: var(--accent-color);
 }
 
 .showpass-icon {
@@ -592,9 +595,153 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 /* signup form */
 
+.signup-container{
+  flex-direction: column;
+}
 
 
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.signup-title {
+  font-size: 28px;
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.signup-title::before,.signup-title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--accent-color-dark);
+}
+
+.signup-title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--accent-color);
+}
+
+.signup-title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signup-signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signup-signin {
+  text-align: center;
+}
+
+.signup-signin a {
+  color: var(--tertiary-text-color);
+}
+
+.signup-signin a:hover {
+  text-decoration: underline var(--accent-color);
+}
+
+.signup-flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.signup-form label {
+  position: relative;
+}
+
+.signup-form label .signup-input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.signup-form label .signup-input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.signup-form label .signup-input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.signup-form label .signup-input:focus + span,.signup-form label .signup-input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.signup-form label .signup-input:valid + span {
+  color: var(--accent-color);
+}
+
+.signup-submit {
+  border: none;
+  outline: none;
+  background-color: var(--accent-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.signup-submit:hover {
+  background-color: var(--accent-color-dark);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.tab-container{
+  display: flex;
+  gap: 20px;
+}
 .tab-button{
+  padding: 5px;
+  }
+
+
+
+/* .tab-button{
   padding: 10px;
   min-width: 130px;
   border: 1px solid;
@@ -604,7 +751,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 .signup-button{
   width: 150px;
   margin-top: 20px;
-}
+} */
 
 
 /* verify email page */
@@ -617,7 +764,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
   flex-direction: column;
   align-items: center;
 
-  background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 60%, rgba(13,111,129,1) 100%);
+  /* background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 60%, rgba(13,111,129,1) 100%); */
   height: 90vh;
   width: 100%;
  align-items: center;
@@ -629,6 +776,8 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 }
 
 .vemail-wrapper {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   max-width: 400px;
   text-align: center;
   padding: 20px;
@@ -704,7 +853,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 }
 
 .vemail-resend-button:hover {
-  background-color: #0056b3;
+  color: var(--accent-color-dark);
 }
 
 
@@ -1530,7 +1679,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 
 .property-details-container {
   
-  padding: 0px 100px;
+  
 }
 
 
@@ -1540,6 +1689,7 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 .slick-slide{
   justify-content: center;
   align-items: center;
+  background-color: white;
   
 }
 
@@ -1583,16 +1733,38 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
 }
 
 
+
+
 .property-highlights {
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 8px;
+  width: 60%;
+}
+
+.property-price-type-bhk-conatiner{
+  justify-content: space-between;
+}
+.property-bhk-type{
+  gap: 15px;
+}
+.feature-item{
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .property-type {
+  font-size: 24px; 
+}
+
+.property-price{
   font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+}
+
+
+.property-address{
+  display: flex;
+  flex-direction: column;
 }
 
 .property-address {
@@ -1600,31 +1772,17 @@ background-image: linear-gradient(180deg, rgba(0,55,64,1) 5%, rgba(0,111,128,1) 
   margin-bottom: 10px;
 }
 
-.property-seller {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.property-price {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.property-description {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.property-features {
+.property-features{
   display: flex;
-  justify-content: space-between;
-
-  .feature-item {
-    flex: 1;
-    font-size: 16px;
-  }
+  flex-direction: column;
 }
+.property-size{
+   font-size: 24px;
+}
+
+
+
+
 
 .property-photos-container {
   display: flex;
@@ -1929,7 +2087,8 @@ input::placeholder {
 .whyrentez-card1 img{
      width: 100px;
      height: 100px;
-     filter: brightness(10%);
+     
+     opacity: 0.6;
 }
 
 .whyrentez-card1-text-heading{
