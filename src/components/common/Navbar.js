@@ -47,6 +47,21 @@ function Navbar() {
     };
   }, [menuRef]);
 
+  const NavbarLinks = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "Properties",
+      path: "/properties",
+    },
+    {
+      title: "About Us",
+      path: "/about",
+    },
+  ];
+
   return (
     <>
       <div className="navbar flex" ref={menuRef}>
@@ -59,12 +74,21 @@ function Navbar() {
         <div className="nav-right flex">
           <nav className="nav">
             <ul className="nav-links flex">
+              {NavbarLinks.map((link, index) => (
+                <Link key={index} to={link.path}>
+                  <li>{link.title}</li>
+                </Link>
+              ))}
+            </ul>
+          </nav>
+          {/* <nav className="nav">
+            <ul className="nav-links flex">
               <Link to="/properties">
                 <li>Properties</li>
               </Link>
               <li>About Us</li>
             </ul>
-          </nav>
+          </nav> */}
           <div className="nav-button flex">
             {token === null && (
               <Link to="/login">

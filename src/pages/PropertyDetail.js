@@ -19,6 +19,8 @@ const PropertyDetail = () => {
   const [response, setResponse] = useState(null);
   const [confirmationModal, setConfirmationModal] = useState(null);
 
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+
   useEffect(() => {
     const getProperty = async () => {
       setLoading(true);
@@ -81,94 +83,102 @@ const PropertyDetail = () => {
 
   return (
     <div className="property-details-container container">
-      <h1>Property Detail Page</h1>
-      <div className="property-detail-left">
-        <div className="property-img-slider">
-          {properties.photos && properties.photos.length > 0 && (
-            <Slider {...sliderSettings}>
-              {properties.photos.map((photo, index) => (
-                <div key={index} className="slider-item">
-                  <img src={photo} alt="photu" />
-                </div>
-              ))}
-            </Slider>
-          )}
-        </div>
-
-        <div className="property-highlights">
-          <div className="property-price-type-bhk-conatiner flex">
-            <div className="property-bhk-type flex">
-              <div className="feature-item"> {properties.bhk}BHK</div>
-              <div className="property-type">{properties.propertyType}</div>
-            </div>
-
-            <div className="property-price">
-              {properties.price} / {properties.pricePer}
-            </div>
-          </div>
-
-          <div className="property-address">
-            {properties.address}, {properties.city}, {properties.state},{" "}
-            {properties.pincode}
-          </div>
-
-          <div className="property-features ">
-            <div className="property-size">Size: {properties.size} sqft</div>
-            <div className="property-bathroom">
-              Bathrooms: {properties.bathrooms}
-            </div>
-          </div>
-          <div className="property-description">{properties.description}</div>
-
-          <div className="property-seller">
-            Seller:{" "}
-            {`${properties.seller?.firstName} ${properties.seller?.lastName}`}
-            {`${properties.seller?.email} `}
-            {`${properties.seller?.additionalDetails?.about ?? "seller info"} `}
-            <img src={`${properties.seller?.image} `} alt="" />
-          </div>
-        </div>
+      <div className="property-img-slider">
+        {properties.photos && properties.photos.length > 0 && (
+          <Slider {...sliderSettings}>
+            {properties.photos.map((photo, index) => (
+              <div key={index} className="slider-item">
+                <img src={photo} alt="photu" />
+              </div>
+            ))}
+          </Slider>
+        )}
       </div>
 
-      <div className="property-detail-right">
-        <form onSubmit={handleOnSubmit}>
-          <h1>Request Inquiry</h1>
-          <input
-            required
-            type="text"
-            name="fullName"
-            value={fullName}
-            onChange={handleOnChange}
-            placeholder="Full Name"
-          />
-          <input
-            required
-            type="text"
-            name="email"
-            value={email}
-            onChange={handleOnChange}
-            placeholder="Email"
-          />
-          <input
-            required
-            type="number"
-            name="contactNumber"
-            value={contactNumber}
-            onChange={handleOnChange}
-            placeholder="Phone Number"
-          />
-          <input
-            required
-            type="text"
-            name="msg"
-            value={msg}
-            onChange={handleOnChange}
-            placeholder="Message"
-          />
-          <button type="submit" className="special-btn">
-            Send Request
-          </button>
-        </form>
+      <div className="property-detail-section flex">
+        <div className="property-details-section-left">
+          <div className="property-details">
+            <div className="property-details-heading">
+              <h1>Property Information : </h1>
+            </div>
+            <h2>
+              {properties?.size} Sqft {properties?.propertyType}
+            </h2>
+            <div className="property-details-price">
+              <h1>
+                {properties?.price} <span>/ {properties?.pricePer}</span>
+              </h1>{" "}
+              <p>Rent</p>
+            </div>
+            <h3>Total Rooms : {properties?.bhk}</h3>
+            <h3>Total Bathrooms : {properties?.bathrooms}</h3>
+            <h3>
+              Listed at : {new Date(properties?.createdAt).toDateString()}
+            </h3>
+            <p>
+              Address : {properties?.address} {properties?.city}{" "}
+              {properties?.state} {properties?.pincode}
+            </p>
+            <p> Description : {properties?.description}</p>
+          </div>
+
+          <div className="seller-details">
+            <h1>Seller Information</h1>
+            <div className="seller-info">
+              <div className="seller-detail-left">
+                <img src={properties?.seller?.image} alt="" />
+              </div>
+              <div className="seller-detail-right">
+                <h2>
+                  {properties?.seller?.firstName} {properties?.seller?.lastName}
+                </h2>
+                <p>{properties?.seller?.email}</p>
+                <p>{properties?.seller?.additionalDetails?.about}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="property-detail-right">
+          <form onSubmit={handleOnSubmit}>
+            <h1>Request Inquiry</h1>
+            <input
+              required
+              type="text"
+              name="fullName"
+              value={fullName}
+              onChange={handleOnChange}
+              placeholder="Full Name"
+            />
+            <input
+              required
+              type="text"
+              name="email"
+              value={email}
+              onChange={handleOnChange}
+              placeholder="Email"
+            />
+            <input
+              required
+              type="number"
+              name="contactNumber"
+              value={contactNumber}
+              onChange={handleOnChange}
+              placeholder="Phone Number"
+            />
+            <input
+              required
+              type="text"
+              name="msg"
+              value={msg}
+              onChange={handleOnChange}
+              placeholder="Message"
+            />
+            <button type="submit" className="special-btn">
+              Send Request
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );

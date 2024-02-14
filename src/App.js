@@ -18,6 +18,7 @@ import ListProperty from "./pages/ListProperty";
 import MyListing from "./pages/MyListing";
 import Properties from "./pages/Properties";
 import PropertyDetail from "./pages/PropertyDetail";
+import Plans from "./pages/Plans";
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,7 @@ function App() {
 
         <Route path="/properties" element={<Properties />} />
         <Route path="/property/:propertyId" element={<PropertyDetail />} />
+        <Route path="/plan" element={<Plans />} />
 
         <Route
           path="signup"
