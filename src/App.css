@@ -1938,7 +1938,7 @@ input::placeholder {
   
 }
 .homepage-hero-form form input {
-  outline-color: var(--accent-color);/* Change the color to your desired focus color */
+  outline-color: var(--accent-color);
 }
 
 
@@ -1997,7 +1997,11 @@ input::placeholder {
   font-size: 1.25rem;
   font-weight: 500; 
   line-height: 1.5; 
-  color: var(--accent-color);
+  
+}
+
+.explore-text a{
+  color: var(--accent-color-dark);
 }
 
 .explore-btn{
@@ -2115,6 +2119,11 @@ input::placeholder {
 }
 
 
+
+
+
+
+
 /* why rentez section */
 .whyrentez-section{
   display: flex;
@@ -2169,6 +2178,82 @@ input::placeholder {
 
 
 
+/* rent-home-card- component */
+
+
+.rent-card-image{
+  margin-top: 50px;
+}
+
+.rent-card-text{
+  margin-left: 50px;
+  padding: 20px;
+  width: 400px;
+}
+
+.rent-card-text h5{
+  color: var(--simple-text-color);
+}
+
+.rent-card-text p{
+  color: var(--secondary-text-color);
+}
+
+.rent-card-text button{
+  margin-top: 40px;
+}
+
+.rent-home-btn{
+  font-weight: 600;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color-dark);
+  border-radius: 10px;
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+/* rent-land-card component */
+
+.rent-land-container{
+  flex-direction: row-reverse;
+}
+
+.rent-r-card-text{
+  margin-right: 70px;
+ 
+  width: 400px;
+}
+
+.rent-r-card-text h5{
+  color: var(--simple-text-color);
+}
+
+.rent-r-card-text p{
+  color: var(--secondary-text-color);
+}
+
+.rent-r-card-text button{
+  margin-top: 40px;
+}
+
+.rent-land-btn{
+  font-weight: 600;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color-dark);
+  border-radius: 10px;
+  padding: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+
+
+
 /* footer */
 
 .footer{
@@ -2177,7 +2262,7 @@ input::placeholder {
   flex-direction: column;
   padding: 30px 100px;
   gap: 10px;
-  background-color: var(--simple-text-color);
+  background-color: white;
   margin-top: 20px;
 }
 
@@ -2428,6 +2513,309 @@ input::placeholder {
 .pricing-package-button-primary:hover {
   background-color: #333;
 }
+
+
+
+
+/* About us page */
+
+.section1 {
+  margin: 0 auto;
+  width: 100%;
+  /* max-width: 1440px; */
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  width: 91.666667%;
+}
+
+.header {
+  margin: 0 auto;
+  padding-top: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  width: 70%;
+}
+
+.subheader {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  width: 95%;
+}
+
+/* .spacer {
+  height: 150px;
+} */
+
+
+.image-grid{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 1.25rem;
+  /* flex-wrap: wrap; */
+}
+/* .image-grid {
+  position: absolute;
+  bottom: 0;
+  left: 51%;
+  width: 100%;
+  transform: translateX(-50%) translateY(30%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+} */
+
+.border-b {
+  border-bottom: 1px solid #1a202c;
+}
+
+.quote {
+  margin: 0 auto;
+  width: 91.666667%;
+}
+
+.flex-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.founding-story,
+.vision,
+.mission {
+  
+  width: 50%;
+}
+
+.founder-title,
+.vision-title,
+.mission-title {
+  background-image: linear-gradient(to bottom right, #ff512f, #f09819);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  width: 70%;
+}
+
+.text {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  width: 95%;
+}
+
+.footer-section {
+  margin-top: 5rem;
+}
+
+
+
+/* quote */
+
+.passion-statement {
+  font-size: 1.25rem; /* text-xl */
+  /* margin: 0 auto; */
+  padding: 1.25rem 0; /* py-5 */
+  padding-bottom: 2.5rem; /* pb-20 */
+  text-align: center;
+  color: black;
+  
+  /* margin-top: 100px; */
+}
+
+.passion-statement .highlight {
+  background-image: linear-gradient(to bottom, #FF512F, #F09819);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600; /* font-semibold */
+  color: black;
+}
+
+.passion-statement .gradient-text1 {
+  background-image: linear-gradient(to bottom, #FF512F, #F09819);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600; /* font-bold */
+}
+
+.passion-statement .gradient-text2 {
+  background-image: linear-gradient(to bottom, #E65C00, #F9D423);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600; /* font-bold */
+}
+
+
+/* stats */
+
+.stats-section {
+  background-color: #1a202c; /* bg-richblack-700 */
+  margin: 30px 0;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* gap-10 */
+  justify-content: space-between;
+  width: 91.666667%; /* w-11/12 */
+  max-width: 1440px; /* max-w-maxContent */
+  color: white;
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(2, 1fr);  */
+  gap: 1rem; /* gap-4 */
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  /* padding-top: 2.5rem;  */
+}
+
+.count {
+  font-size: 1.875rem; /* text-[30px] */
+  font-weight: 700; /* font-bold */
+  color: #f5f5f5; /* text-richblack-5 */
+}
+
+.label-h2 {
+  font-weight: 600; /* font-semibold */
+  font-size: 1rem; /* text-[16px] */
+  color: #7f7f7f; /* text-richblack-500 */
+}
+
+
+/* contact section */
+
+.get-in-touch {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem; /* text-4xl */
+  font-weight: 600; /* font-semibold */
+}
+
+.description {
+  color: #4b5563; /* text-richblack-300 */
+  margin-top: 0.75rem; /* mt-3 */
+}
+
+.form {
+  margin-top: 3rem; /* mt-12 */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 670px;
+}
+
+
+
+/* contact form */
+
+.contact-form {
+  display: flex;
+  width: 100%;
+  padding: auto;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+}
+
+.form-col {
+  flex: 1;
+}
+
+/* .form-col-50 {
+  flex: 1;
+  width: 48%;
+} */
+
+/* .form-label {
+  font-weight: bold;
+} */
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  outline-color: var(--accent-color);
+}
+
+.form-select{
+  width: 12%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.phone-input {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.phone-number {
+  flex: 1;
+}
+
+.error-message {
+  font-size: 0.75rem;
+  color: #f00;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  background-color: var(--accent-color);
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.button-hover:hover {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
+
 
 
 

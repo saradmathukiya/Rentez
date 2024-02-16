@@ -19,16 +19,20 @@ import MyListing from "./pages/MyListing";
 import Properties from "./pages/Properties";
 import PropertyDetail from "./pages/PropertyDetail";
 import Plans from "./pages/Plans";
+import Chatbot from "./components/core/Chatbot";
+import About from "./pages/About";
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <Chatbot />
       <Routes>
         <Route path="/" element={<Home />} />
 
         <Route path="/properties" element={<Properties />} />
         <Route path="/property/:propertyId" element={<PropertyDetail />} />
         <Route path="/plan" element={<Plans />} />
+        <Route path="/about" element={<About />} />
 
         <Route
           path="signup"

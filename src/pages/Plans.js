@@ -1,8 +1,21 @@
 import { useState } from "react";
 import { FcInfo } from "react-icons/fc";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { buyCourse } from "../services/operations/paymentAPI";
 
 const Plans = () => {
   const [isYearly, setIsYearly] = useState(false);
+  const { token } = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.profile);
+  const navigate = useNavigate();
+
+  const handleBuyCourse = (plan, planType) => {
+    if (token) {
+      buyCourse(token, plan, planType, user, navigate);
+      return;
+    }
+  };
 
   const packages = [
     {
@@ -100,7 +113,15 @@ const Plans = () => {
             </ul>
 
             <div className="pricing-package-button">
-              <button className="pricing-package-button-primary">
+              <button
+                className="pricing-package-button-primary"
+                onClick={() =>
+                  handleBuyCourse(
+                    isYearly ? pkg.yearlyPrice : pkg.monthlyPrice,
+                    pkg.name
+                  )
+                }
+              >
                 Get Started
               </button>
             </div>

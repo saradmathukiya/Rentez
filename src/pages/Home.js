@@ -13,6 +13,10 @@ import broker from "../assets/broker.png";
 import listing from "../assets/listing.png";
 import house from "../assets/house.png";
 import agreement from "../assets/agreement.png";
+import { Link } from "react-router-dom";
+import img1 from "../assets/img1.webp";
+import img2 from "../assets/img2.webp";
+import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
   const [properties, setProperties] = useState([]);
@@ -125,7 +129,9 @@ const Home = () => {
         <div className="slider-card-text-btn container">
           <div className="slider-card-text">Popular Listings</div>
           <div className="slider-card-btn">
-            <div className="explore-text">Explore All</div>
+            <div className="explore-text">
+              <Link to="/properties">Explore All</Link>
+            </div>
             <div className="explore-btn">
               <FaArrowRightLong />
             </div>
@@ -171,39 +177,83 @@ const Home = () => {
       <section className="whyrentez-section">
         <div className="whyrentez-text">Why Rentez</div>
         <div className="whyrentez-card container">
-          <a className="whyrentez-card1">
-            <img src={broker} alt="no broker image" />
-            <div className="whyrentez-card1-text-heading">Avoid Brokers</div>
-            <div className="whyrentez-card1-text-paragraph">
-              We directly connect you to verified owners to save brokerage
-            </div>
-          </a>
+          <Fade duration="2000" direction="left">
+            <a className="whyrentez-card1">
+              <img src={broker} alt="no broker image" />
+              <div className="whyrentez-card1-text-heading">Avoid Brokers</div>
+              <div className="whyrentez-card1-text-paragraph">
+                We directly connect you to verified owners to save brokerage
+              </div>
+            </a>
+          </Fade>
+          <Fade duration="2000" direction="left">
+            <a className="whyrentez-card1">
+              <img src={listing} alt="no broker image" />
+              <div className="whyrentez-card1-text-heading">Easy Listings</div>
+              <div className="whyrentez-card1-text-paragraph">
+                Easy listing process. Also using WhatsApp
+              </div>
+            </a>
+          </Fade>
 
-          <a className="whyrentez-card1">
-            <img src={listing} alt="no broker image" />
-            <div className="whyrentez-card1-text-heading">Easy Listings</div>
-            <div className="whyrentez-card1-text-paragraph">
-              Easy listing process. Also using WhatsApp
-            </div>
-          </a>
+          <Fade duration="2000" direction="right">
+            <a className="whyrentez-card1">
+              <img src={house} alt="no broker image" />
+              <div className="whyrentez-card1-text-heading">
+                Shortlist without Visit
+              </div>
+              <div className="whyrentez-card1-text-paragraph">
+                Extensive information makes it Easy
+              </div>
+            </a>
+          </Fade>
 
-          <a className="whyrentez-card1">
-            <img src={house} alt="no broker image" />
-            <div className="whyrentez-card1-text-heading">
-              Shortlist without Visit
-            </div>
-            <div className="whyrentez-card1-text-paragraph">
-              Extensive information makes it Easy
-            </div>
-          </a>
+          <Fade duration="2000" direction="right">
+            <a className="whyrentez-card1">
+              <img src={agreement} alt="no broker image" />
+              <div className="whyrentez-card1-text-heading">
+                Rental Agreement
+              </div>
+              <div className="whyrentez-card1-text-paragraph">
+                Assistance in creating Rental agreement & Paper work
+              </div>
+            </a>
+          </Fade>
+        </div>
+      </section>
 
-          <a className="whyrentez-card1">
-            <img src={agreement} alt="no broker image" />
-            <div className="whyrentez-card1-text-heading">Rental Agreement</div>
-            <div className="whyrentez-card1-text-paragraph">
-              Assistance in creating Rental agreement & Paper work
+      <section class="rent-home-card-section">
+        <div className="rent-card-container flex  container">
+          <div className="rent-card-image">
+            <img src={img1} alt="rent picture" />
+          </div>
+          <Fade duration="2000" direction="right">
+            <div className="rent-card-text">
+              <h5>RENT A HOME</h5>
+              <h2>Rental Homes for Everyone</h2>
+              <p>Explore from Apartments, builder floors, villas and more</p>
+              <button className="rent-home-btn">Explore Renting</button>
             </div>
-          </a>
+          </Fade>
+        </div>
+      </section>
+
+      <section class="rent-land-card-section ">
+        <div className="rent-land-container flex  container">
+          <div className="rent-card-image">
+            <img src={img2} alt="rent picture" />
+          </div>
+          <Fade duration="2000" direction="left">
+            <div className="rent-r-card-text">
+              <h5>BUY PLOTS/LAND</h5>
+              <h2>Residential & Commercial Plots/Land</h2>
+              <p>
+                Explore Residential, Agricultural, Industrial and Commercial
+                Plots/Land
+              </p>
+              <button className="rent-land-btn">Explore Plots/Lands</button>
+            </div>
+          </Fade>
         </div>
       </section>
     </>
