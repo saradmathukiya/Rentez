@@ -8,7 +8,7 @@ const ContactFormSection = () => {
       <p class="description">
         We'd love to hear from you. Please fill out this form.
       </p>
-      <div class="form">
+      <div class="form ">
         <ContactUsForm />
       </div>
     </div>

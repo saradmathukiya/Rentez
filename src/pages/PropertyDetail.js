@@ -95,7 +95,7 @@ const PropertyDetail = () => {
         )}
       </div>
 
-      <div className="property-detail-section flex">
+      <div className="property-details-section ">
         <div className="property-details-section-left">
           <div className="property-details">
             <div className="property-details-heading">
@@ -139,7 +139,7 @@ const PropertyDetail = () => {
           </div>
         </div>
 
-        <div className="property-detail-right">
+        <div className="property-details-section-right">
           <form onSubmit={handleOnSubmit}>
             <h1>Request Inquiry</h1>
             <input

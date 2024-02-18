@@ -33,7 +33,7 @@ export default function MyProfile() {
           <RiEditBoxLine />
         </IconBtn>
       </div>
-
+      <div className="profile-line"></div>
       <div className="profile-section">
         <div className="details-container">
           <div className="details-header">
@@ -57,6 +57,7 @@ export default function MyProfile() {
             {user?.additionalDetails?.about ?? "Write Something About Yourself"}
           </p>
         </div>
+        <div className="profile-line"></div>
 
         <div className="details-container">
           <div className="details-header">
