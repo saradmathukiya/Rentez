@@ -31,7 +31,47 @@ const LoginForm = () => {
     dispatch(login(email, password, navigate));
   };
   return (
-    <div className="login-container flex">
+    <div className="signin-container">
+      <div class="form-container">
+        <p class="signin-title">Welcome back</p>
+        <form class="signin-form" onSubmit={handleOnSubmit}>
+          <input
+            type="email"
+            class="input"
+            placeholder="Email"
+            name="email"
+            value={email}
+            onChange={handleOnChange}
+          />
+          <input
+            type="password"
+            class="input"
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={handleOnChange}
+          />
+          <Link to="/forgot-password">
+            <p class="page-link">
+              <span class="page-link-label">Forgot Password?</span>
+            </p>
+          </Link>
+          <button class="signinform-btn">Log in</button>
+        </form>
+        <Link to="/signup">
+          <p class="sign-up-label">
+            Don't have an account?<span class="sign-up-link">Sign up</span>
+          </p>
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default LoginForm;
+
+{
+  /* <div className="login-container flex">
       <form onSubmit={handleOnSubmit} className="login-form-container flex ">
         <label className="email-label">
           <p className="email-label-text">
@@ -84,8 +124,5 @@ const LoginForm = () => {
           Sign In
         </button>
       </form>
-    </div>
-  );
-};
-
-export default LoginForm;
+    </div> */
+}
