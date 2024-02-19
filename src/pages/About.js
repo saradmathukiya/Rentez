@@ -82,7 +82,7 @@ const About = () => {
               <h1 class="mission-title">Our Mission</h1>
               <p class="text">
                 Our mission goes beyond just delivering courses online. We
-                wanted to create a vibrant community of learners, where
+                wanted to create a vibrant community of renters, where
                 individuals can connect, collaborate, and learn from one
                 another. We believe that knowledge thrives in an environment of
                 sharing and dialogue, and we foster this spirit of collaboration
