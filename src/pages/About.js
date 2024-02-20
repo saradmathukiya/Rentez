@@ -86,7 +86,7 @@ const About = () => {
                 individuals can connect, collaborate, and learn from one
                 another. We believe that knowledge thrives in an environment of
                 sharing and dialogue, and we foster this spirit of collaboration
-                through forums, live sessions, and networking opportunities.
+                through forums, and networking opportunities.
               </p>
             </div>
           </div>
