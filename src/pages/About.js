@@ -85,8 +85,8 @@ const About = () => {
                 wanted to create a vibrant community of renters, where
                 individuals can connect, collaborate, and learn from one
                 another. We believe that knowledge thrives in an environment of
-                sharing and dialogue, and we foster this spirit of collaboration
-                through forums, and networking opportunities.
+                sharing and we foster this spirit of collaboration through
+                forums, and networking opportunities.
               </p>
             </div>
           </div>
