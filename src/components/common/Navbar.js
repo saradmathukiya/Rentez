@@ -143,12 +143,8 @@ function Navbar() {
                 path={"/properties"}
               />
 
-              <DropdownItem img={faqs} text={"FAQs"} path={"/dashboard/FAQs"} />
-              <DropdownItem
-                img={partner}
-                text={"Partner"}
-                path={"/dashboard/Partner"}
-              />
+              <DropdownItem img={faqs} text={"Pricing"} path={"/plan"} />
+
               <DropdownItem
                 img={faqs}
                 text={"Settings"}

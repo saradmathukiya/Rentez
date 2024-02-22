@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
+import light from "../../assets/light.svg";
 
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
@@ -17,7 +18,7 @@ const Footer = () => {
             <Link to="/">
               <img
                 style={{ height: "100%", width: "150px" }}
-                src={logo}
+                src={light}
                 alt="logo"
               />
             </Link>
