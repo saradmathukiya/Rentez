@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../components/common/Card";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
+import FilterModal from '../components/common/FilterModal'
 import { getAllProperty } from "../services/operations/propertyAPI";
 
 const Properties = () => {
@@ -10,10 +10,14 @@ const Properties = () => {
   const { token } = useSelector((state) => state.auth);
   const [loading, setLoading] = useState(true);
 
+  const [filterModal, setFilterModal] = useState(null);
+
+  const { filterData } = useSelector((state) => state.filter);
+
   useEffect(() => {
     const getProperty = async () => {
       setLoading(true);
-      const result = await getAllProperty();
+      const result = await getAllProperty(filterData);
       console.log(result);
       if (result) {
         setProperties(result);
@@ -22,7 +26,7 @@ const Properties = () => {
     getProperty();
     setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [filterData]);
 
   return (
     <div className="mylisting-container">
@@ -32,6 +36,18 @@ const Properties = () => {
         ) : (
           <>
             <div className="my-listings">
+            <div className="properties-filter-section">
+                <button
+                  className="filter-btn"
+                  onClick={() =>
+                    setFilterModal({
+                      cancelBtnHandler: () => setFilterModal(null),
+                    })
+                  }
+                >
+                  Filters
+                </button>
+              </div>
               {properties?.map((property, index) => {
                 return (
                   <Card
@@ -54,6 +70,7 @@ const Properties = () => {
           </>
         )}
       </div>
+      {filterModal && <FilterModal modalData={filterModal} />}
     </div>
   );
 };

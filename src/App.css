@@ -24,6 +24,43 @@ body {
     
 }
 
+.properties-filter-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+.filter-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* backdrop-filter: blur(20px); */
+  background-color: rgba(36, 34, 38, 0.8);
+  z-index: 3;
+}
+
+.filter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 0px 30px 0px;
+  align-items: center;
+  height: 96vh;
+  overflow-y: scroll;
+}
+
 
 p {
     font-family: 'Montserrat', sans-serif;
