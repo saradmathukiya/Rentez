@@ -1525,7 +1525,7 @@ ul {
 
 /* add property page */
 
-.create-listing-wrapper {
+/* .create-listing-wrapper {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -1588,7 +1588,7 @@ ul {
 
 #inp {
   display: none;
-}
+} */
 
 
 
@@ -2405,7 +2405,7 @@ input::placeholder {
 /* featured */
 .featured .box {
   box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
-  border-radius: 6px;
+  border-radius: 25px;
   text-align: center;
   padding: 30px;
   cursor: pointer;
@@ -2471,12 +2471,12 @@ input::placeholder {
      width: 100px;
      height: 100px;
      
-     opacity: 0.6;
+     opacity: 0.7;
 }
 
 .whyrentez-card1-text-heading{
   font-size: 18px;
-  color: var(--secondary-text-color);
+  color: var(--accent-color-dark);
 }
 
 .whyrentez-card1-text-paragraph{
@@ -2881,6 +2881,7 @@ input::placeholder {
   justify-content: center;
   gap: 15px;
   margin-top: 1.25rem;
+  height: 270px;
   /* flex-wrap: wrap; */
 }
 /* .image-grid {
@@ -2903,11 +2904,11 @@ input::placeholder {
   width: 91.666667%;
 }
 
-.highlight,
+/* .highlight,
 .gradient-text1,
 .gradient-text2{
-  color: var(--accent-color-dark);
-}
+  background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.01195023908000703) 100%);
+} */
 
 .flex-container {
   margin-top: 3rem;
@@ -2923,9 +2924,13 @@ input::placeholder {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   width: 50%;
+  border-radius: 10px;
   padding: 10px 10px;
 }
 
+.vision{
+  width: 53.5%;
+}
 
 
 .founder-title,
@@ -2938,6 +2943,7 @@ input::placeholder {
   font-weight: 600;
   line-height: 1.25;
   width: 70%;
+  color: #006f80;
 }
 
 .text {
@@ -2969,24 +2975,19 @@ input::placeholder {
 }
 
 .passion-statement .highlight {
-  background-image: linear-gradient(to bottom, #FF512F, #F09819);
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 600; /* font-semibold */
-  /* color: black; */
-}
+  /* color: white; */
+  background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);}
 
 .passion-statement .gradient-text1 {
-  background-image: linear-gradient(to bottom, #FF512F, #F09819);
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);
   font-weight: 600; /* font-bold */
 }
 
 .passion-statement .gradient-text2 {
-  background-image: linear-gradient(to bottom, #E65C00, #F9D423);
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);
   font-weight: 600; /* font-bold */
 }
 
@@ -3144,6 +3145,78 @@ input::placeholder {
 .button-disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Create Listing Property  */
+
+.create-listing-wrapper {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 50px;
+  align-items: center;
+  gap: 20px;
+}
+
+.create-listing-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 20px 0;
+}
+
+.create-listing-data {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.create-listing-data label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  font-size: large;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.create-listing-data label input,
+textarea,
+select {
+  outline: #000;
+  width: 100%;
+  user-select: none;
+  font-size: large;
+  padding: 15px 0px;
+  text-align: center;
+  border: 1px solid rgb(222, 222, 222);
+  border-radius: 15px;
+  color: var(--secondary-dark-color);
+}
+
+#inp {
+  display: none;
+}
+
+.create-listing-data label button {
+  width: 100%;
+  padding: 10px 0;
 }
 
 

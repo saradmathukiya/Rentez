@@ -232,7 +232,9 @@ const Home = () => {
               <h5>RENT A HOME</h5>
               <h2>Rental Homes for Everyone</h2>
               <p>Explore from Apartments, builder floors, villas and more</p>
-              <button className="rent-home-btn">Explore Renting</button>
+              <Link to="/properties">
+                <button className="rent-home-btn">Explore Renting</button>
+              </Link>
             </div>
           </Fade>
         </div>
@@ -251,7 +253,9 @@ const Home = () => {
                 Explore Residential, Agricultural, Industrial and Commercial
                 Plots/Land
               </p>
-              <button className="rent-land-btn">Explore Plots/Lands</button>
+              <Link to="/properties">
+                <button className="rent-land-btn">Explore Plots/Lands</button>
+              </Link>
             </div>
           </Fade>
         </div>
