@@ -2978,17 +2978,19 @@ input::placeholder {
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 600; /* font-semibold */
-  /* color: white; */
+  color: rgba(0, 0, 0, 0.559);
   background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);}
 
 .passion-statement .gradient-text1 {
   background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);
   font-weight: 600; /* font-bold */
+  color: rgba(0, 0, 0, 0.559);
 }
 
 .passion-statement .gradient-text2 {
   background: linear-gradient(90deg, rgba(0,60,70,0.6253956172312676) 45%, rgba(0,111,128,0.32567572927608546) 100%);
   font-weight: 600; /* font-bold */
+  color: rgba(0, 0, 0, 0.559);
 }
 
 
