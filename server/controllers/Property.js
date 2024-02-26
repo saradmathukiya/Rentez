@@ -170,8 +170,8 @@ exports.getAllListings = async (req, res) => {
     // console.log(queryObject);
 
     const properties = await Property.find(queryObject)
-      .populate("seller")
-      .exec();
+      // .populate("seller")
+      // .exec();
 
     return res.status(200).json({
       success: true,
