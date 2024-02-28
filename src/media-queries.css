@@ -1,0 +1,78 @@
+@media screen and (max-width: 768px) {
+
+
+    /* hero section */
+    .homepage-hero-text h1{
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    .homepage-hero {
+        padding: 20px;
+      }
+    
+      /* .homepage-hero-text h1 {
+        font-size: 30px;
+        line-height: 40px;
+      } */
+    
+      .homepage-hero-form {
+        width: 80%;
+      }
+    
+      .homepage-hero-form form {
+        padding: 0 10px;
+      }
+    
+      .btn1-hero {
+        padding: 10px 20px;
+      }
+
+      /* featured section */
+      .featured-heading h1 {
+        font-size: 25px;
+      }
+    
+      .featured .box {
+        padding: 15px;
+      }
+
+
+
+      /* slider section */
+
+      .slider-card-text {
+        font-size: 25px;
+        margin-left: 20px;
+      }
+    
+      .slider-btn-homepage {
+        margin-left: 0;
+        /* justify-content: space-around; */
+      }
+
+
+      /* why rentez section */
+
+      .whyrentez-text {
+        font-size: 25px;
+      }
+    
+      .whyrentez-card1 {
+        width: 150px;
+      }
+    
+      .whyrentez-card1 img {
+        width: 60px;
+        height: 60px;
+      }
+    
+      .whyrentez-card1-text-heading {
+        font-size: 14px;
+      }
+    
+      .whyrentez-card1-text-paragraph {
+        font-size: 9px;
+      }
+}

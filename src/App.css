@@ -24,42 +24,8 @@ body {
     
 }
 
-.properties-filter-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px 30px;
-}
 
-.filter-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* backdrop-filter: blur(20px); */
-  background-color: rgba(36, 34, 38, 0.8);
-  z-index: 3;
-}
 
-.filter {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: white;
-  border-radius: 15px;
-  padding: 0px 30px 0px;
-  align-items: center;
-  height: 96vh;
-  overflow-y: scroll;
-}
 
 
 p {
@@ -1728,7 +1694,313 @@ ul {
   color: white;
 }
 
+
+/* filter */
+.filter-btn{
+  padding: 5px;
+  width: 60%;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.filter-btn:hover{
+  background-color: var(--accent-color);
+  color: var(--primary-text-color);
+}
+
+.properties-filter-section {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+.filter-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* backdrop-filter: blur(20px); */
+  background-color: rgba(36, 34, 38, 0.8);
+  z-index: 3;
+}
+
+.filter {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 0px 30px 0px;
+  align-items: center;
+  height: 96vh;
+  overflow-y: scroll;
+}
+
+
+.filter::-webkit-scrollbar {
+  background-color: transparent;
+  width: 15px;
+}
+.filter::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.filter::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 4px solid transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-clip: content-box;
+}
+
+.filter-heading {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.filter-heading h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.filter-close-btn {
+  font-size: 2.5rem;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.filter-close-btn:hover {
+  background-color: whitesmoke;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: 90%;
+  margin: auto;
+}
+
+
+
+#checklist {
+  --check: #006f80;
+  --disabled: var(--special-color);
+  --width: 100px;
+  --height: 180px;
+  --border-radius: 10px;
+  background: var(--light-color);
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  position: relative;
+  padding: 0px 85px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#checklist label {
+  color: var(--primary-dark-color);
+  font-weight: 100;
+  font-size: large;
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  width: fit-content;
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
+
+#checklist label::before,
+#checklist label::after {
+  content: "";
+  position: absolute;
+}
+
+#checklist label::before {
+  height: 2px;
+  width: 8px;
+  left: -27px;
+  background: var(--check);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+#checklist label:after {
+  height: 4px;
+  width: 4px;
+  top: 8px;
+  left: -25px;
+  border-radius: 50%;
+}
+
+#checklist input[type="checkbox"] {
+  --webkit-appearance: none;
+  --moz-appearance: none;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  outline: none;
+  border: 0;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  background: var(--light-color);
+  display: grid;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#checklist input[type="checkbox"]::before,
+#checklist input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: auto;
+  background: var(--check);
+  border-radius: 2px;
+}
+
+#checklist input[type="checkbox"]::before {
+  width: 0px;
+  right: 60%;
+  transform-origin: right bottom;
+}
+
+#checklist input[type="checkbox"]::after {
+  width: 0px;
+  left: 40%;
+  transform-origin: left bottom;
+}
+
+#checklist input[type="checkbox"]:checked::before {
+  animation: check-01 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked::after {
+  animation: check-02 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label {
+  color: var(--disabled);
+  animation: move 0.3s ease 0.1s forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label::before {
+  background: var(--disabled);
+  animation: slice 0.4s ease forwards;
+}
+
+#checklist input[type="checkbox"]:checked + label::after {
+  animation: firework 0.5s ease forwards 0.1s;
+}
+
+
+.filter-form-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-form-bottom label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: large;
+  font-weight: 500;
+}
+
+.filter-form-bottom input {
+  padding: 10px;
+  font-size: medium;
+  border: 1px solid rgb(126, 125, 125);
+  border-radius: 8px;
+  width: 300px;
+}
+
+.filter-price {
+  display: flex;
+  gap: 20px;
+}
+
+hr {
+  width: 90%;
+  margin: 20px;
+  border: 0.05px solid #cac9c9b3;
+}
+
+.filter-form-top {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.filter-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  bottom: 0px;
+  background-color: white;
+  padding: 20px 0px;
+}
+
+.clear-filter-btn {
+  padding: 13px 10px;
+  font-size: medium;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.clear-filter-btn:hover {
+  background-color: whitesmoke;
+}
+
+.search-filter-btn {
+  padding: 13px 25px;
+  font-size: medium;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+
+
 /* all properties */
+
+
 
 .my-listings{
   display: flex;
@@ -2224,6 +2496,11 @@ ul {
 
 
 /* home page */
+
+.main-container{
+  overflow: hidden;
+}
+
 
 .homepage-bg-image{
   background-image:

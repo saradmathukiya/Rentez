@@ -59,7 +59,16 @@ const Home = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          // dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
         },
       },
       {
@@ -81,7 +90,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="main-container">
       <header className="homepage-hero-section">
         <div className="homepage-bg-image  homepage-hero">
           <div className="homepage-hero-text">
@@ -260,7 +269,7 @@ const Home = () => {
           </Fade>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

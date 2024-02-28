@@ -3,8 +3,11 @@ import { studentEndpoints } from "../apis";
 import { apiConnector } from "../apiconnector";
 import rzpLogo from "../../assets/logo.svg";
 
-const { PLAN_PAYMENT_API, PLAN_VERIFY_API, SEND_PAYMENT_SUCCESS_EMAIL_API } =
-  studentEndpoints;
+const {
+  PLAN_PAYMENT_API,
+  PLAN_VERIFY_API,
+  SEND_PAYMENT_SUCCESS_EMAIL_API,
+} = studentEndpoints;
 
 function loadScript(src) {
   return new Promise((resolve) => {
@@ -50,7 +53,7 @@ export async function buyCourse(token, plan, planType, userDetails, navigate) {
     console.log("PRINTING orderResponse", orderResponse);
     //options
     const options = {
-      key: "rzp_test_S0sTVy9O8LH3LK",
+      key: process.env.RAZORPAY_KEY,
       currency: `${orderResponse.data.data.currency}`,
       amount: `${orderResponse.data.data.amount}`,
       order_id: `${orderResponse.data.data.id}`,
@@ -61,7 +64,7 @@ export async function buyCourse(token, plan, planType, userDetails, navigate) {
         name: `${userDetails?.firstName}`,
         email: `${userDetails?.email}`,
       },
-      handler: function (response) {
+      handler: function(response) {
         //send successful wala mail
         sendPaymentSuccessEmail(
           response,
@@ -75,7 +78,7 @@ export async function buyCourse(token, plan, planType, userDetails, navigate) {
     //miss hogya tha
     const paymentObject = new window.Razorpay(options);
     paymentObject.open();
-    paymentObject.on("payment.failed", function (response) {
+    paymentObject.on("payment.failed", function(response) {
       toast.error("oops, payment failed");
       console.log(response);
     });

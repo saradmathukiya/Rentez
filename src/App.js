@@ -1,4 +1,5 @@
 import "./App.css";
+import "./media-queries.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import OpenRoute from "./components/Auth/OpenRoute";
