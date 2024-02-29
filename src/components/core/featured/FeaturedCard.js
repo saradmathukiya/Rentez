@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 const FeaturedCard = () => {
   return (
     <>
-      <Fade duration="1500">
+      <Fade triggerOnce duration="1500">
         <div className="content grid5 mtop">
           {featured.map((items, index) => (
             <div className="box" key={index}>

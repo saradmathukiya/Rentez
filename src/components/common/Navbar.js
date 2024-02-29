@@ -25,12 +25,23 @@ function Navbar() {
 
   const [open, setOpen] = useState(false);
   const [confirmationModal, setConfirmationModal] = useState(null);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname);
   };
 
   const menuRef = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -126,6 +137,21 @@ function Navbar() {
         <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
           {user?.accountType === "Customer" && (
             <ul className="dropdown-links">
+              {screenWidth <= 480 && (
+                <>
+                  <DropdownItem img={profile} text={"Home"} path={"/"} />
+                  <DropdownItem
+                    img={profile}
+                    text={"Properties"}
+                    path={"/properties"}
+                  />
+                  <DropdownItem
+                    img={profile}
+                    text={"About Us"}
+                    path={"/about"}
+                  />
+                </>
+              )}
               <DropdownItem
                 img={profile}
                 text={"My Profile"}
@@ -135,12 +161,6 @@ function Navbar() {
                 img={favourite}
                 text={"Favorites"}
                 path={"/dashboard/Favorites"}
-              />
-
-              <DropdownItem
-                img={favourite}
-                text={"Properties"}
-                path={"/properties"}
               />
 
               <DropdownItem img={faqs} text={"Pricing"} path={"/plan"} />
@@ -178,6 +198,21 @@ function Navbar() {
 
           {user?.accountType === "Seller" && (
             <ul className="dropdown-links">
+              {screenWidth <= 480 && (
+                <>
+                  <DropdownItem img={profile} text={"Home"} path={"/"} />
+                  <DropdownItem
+                    img={profile}
+                    text={"Properties"}
+                    path={"/properties"}
+                  />
+                  <DropdownItem
+                    img={profile}
+                    text={"About Us"}
+                    path={"/about"}
+                  />
+                </>
+              )}
               <DropdownItem
                 img={profile}
                 text={"My Profile"}

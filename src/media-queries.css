@@ -75,4 +75,319 @@
       .whyrentez-card1-text-paragraph {
         font-size: 9px;
       }
+
+      /* rent card */
+
+      .rent-card-container{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .rent-card-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      /* rent land */
+
+      .rent-land-container{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .rent-r-card-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        
+      }
+
+
+      /* footer */
+
+      .footer-sub-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer-sub-content-left{
+        display: flex;
+        height: 60px;
+        text-align: center;
+        
+
+      }
+
+     
+}
+
+
+@media screen and (max-width: 480px){
+
+     /* navbar */
+     .nav{
+        display: none;
+     }
+
+
+
+
+    /* hompage hero */
+    .homepage-bg-image {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .homepage-hero-text h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+  
+    /* .homepage-hero-form {
+      width: 100%;
+    }
+  
+    .homepage-hero-form form {
+      padding: 0 10px;
+    }
+  
+    .homepage-hero-form form input {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .homepage-hero-form form .box {
+      padding: 10px;
+    }
+  
+    .btn1-hero {
+      padding: 10px 30px;
+      font-size: 14px;
+    } */
+
+    .homepage-hero-form {
+      margin-top: 50px;
+      width: 90%; /* Reduce the width of the form */
+      margin-bottom: 50px;
+      text-align: center; /* Center align the form */
+    }
+  
+    .homepage-hero-form form {
+      
+      padding: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px; /* Set a max-width for the form */
+      margin: 0 auto; /* Center the form horizontally */
+    }
+  
+    .homepage-hero-form form .box {
+      padding: 2px; /* Reduce padding */
+      border-left: none;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* Add bottom border */
+      width: 100%; /* Make the boxes full width */
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+  
+    .homepage-hero-form form input {
+      padding: 4px; /* Reduce padding */
+      width: 100%;
+      border: none;
+      margin-top: 5px;
+      border-radius: 5px;
+      box-sizing: border-box; /* Include padding in width calculation */
+    }
+  
+    .homepage-hero-form form span {
+      font-size: 15px; /* Reduce font size */
+      color: grey;
+      margin-top: 5px; /* Reduce margin top */
+    }
+  
+    .homepage-hero-form form .box:nth-child(3) {
+      border-bottom: none; /* Remove bottom border from the last box */
+    }
+  
+    .homepage-hero-form form button {
+      margin-top: 15px; /* Adjust button margin */
+      padding: 8px 20px; /* Reduce button padding */
+      font-size: 14px; /* Reduce font size */
+    }
+
+
+    /* offer section */
+
+    .offer-section-box {
+      padding: 10px;
+      height: auto;
+    }
+  
+    .offer-section-box h2 {
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+  
+    .offer-section-box p {
+      font-size: 0.75rem;
+    }
+
+
+    /* features card */
+
+    .grid5 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid5 .box:nth-child(5) {
+      grid-column: span 2; /* Make the last item span both columns */
+      justify-self: center; /* Center the item horizontally */
+      padding: 20px;
+    }
+
+    .featured-heading {
+      margin-top: 30px;
+    }
+    .featured-heading h1 {
+      font-size: 25px;
+    }
+  
+    /* Featured card */
+    .featured .box {
+      padding: 20px;
+    }
+    .featured img {
+      width: 50px;
+      height: 50px;
+    }
+
+
+    /* slider */
+    .slider-card-text {
+      font-size: 25px;
+      margin-left: 10px;
+    }
+  
+    .slider-btn-homepage {
+      margin-left: 0;
+      /* justify-content: space-around; */
+    }
+
+    .explore-text{
+      font-size: 1rem;
+      font-weight: 400;
+      
+    }
+    .slider-card-btn{
+      margin-top: 5px;
+    }
+
+
+    /* why rentez */
+
+    .whyrentez-section {
+      gap: 20px;
+    }
+  
+    .whyrentez-card {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .whyrentez-card1 {
+      width: 100%;
+    }
+  
+    .whyrentez-card1 img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .whyrentez-card1-text-heading {
+      font-size: 16px;
+    }
+  
+    .whyrentez-card1-text-paragraph {
+      font-size: 13px;
+    }
+
+
+    /* rent home , land section */
+
+    .rent-card-text,
+  .rent-r-card-text {
+    margin: 20px;
+    padding: 10px;
+    width: calc(100% - 40px);
+  }
+
+  .rent-card-text button,
+  .rent-r-card-text button {
+    margin-top: 20px;
+    padding: 10px;
+  }
+
+  .rent-card-image img,
+  .rent-land-container img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+    /* footer */
+    .footer{
+      padding: 0 0 ;
+    }
+
+    
+  
+    .company-logo img {
+      height: 100px;
+      width: auto;
+    }
+  
+    .footer-icons-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .footer-icons {
+      margin-right: 10px;
+    }
+  
+    .footer-sub-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-sub-content-left,
+    .footer-sub-content-right {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .footer-section {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .footer-bottom {
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+  
+    .partition2 {
+      display: none;
+    }
 }

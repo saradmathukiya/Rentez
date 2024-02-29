@@ -46,7 +46,7 @@ const Home = () => {
 
   var settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
@@ -186,7 +186,7 @@ const Home = () => {
       <section className="whyrentez-section">
         <div className="whyrentez-text">Why Rentez</div>
         <div className="whyrentez-card container">
-          <Fade duration="2000" direction="left">
+          <Fade triggerOnce duration="2000" direction="left">
             <a className="whyrentez-card1">
               <img src={broker} alt="no broker image" />
               <div className="whyrentez-card1-text-heading">Avoid Brokers</div>
@@ -195,7 +195,7 @@ const Home = () => {
               </div>
             </a>
           </Fade>
-          <Fade duration="2000" direction="left">
+          <Fade triggerOnce duration="2000" direction="left">
             <a className="whyrentez-card1">
               <img src={listing} alt="no broker image" />
               <div className="whyrentez-card1-text-heading">Easy Listings</div>
@@ -205,7 +205,7 @@ const Home = () => {
             </a>
           </Fade>
 
-          <Fade duration="2000" direction="right">
+          <Fade triggerOnce duration="2000" direction="right">
             <a className="whyrentez-card1">
               <img src={house} alt="no broker image" />
               <div className="whyrentez-card1-text-heading">
@@ -217,7 +217,7 @@ const Home = () => {
             </a>
           </Fade>
 
-          <Fade duration="2000" direction="right">
+          <Fade triggerOnce duration="2000" direction="right">
             <a className="whyrentez-card1">
               <img src={agreement} alt="no broker image" />
               <div className="whyrentez-card1-text-heading">
@@ -236,7 +236,7 @@ const Home = () => {
           <div className="rent-card-image">
             <img src={img1} alt="rent picture" />
           </div>
-          <Fade duration="2000" direction="right">
+          <Fade triggerOnce duration="2000" direction="right">
             <div className="rent-card-text">
               <h5>RENT A HOME</h5>
               <h2>Rental Homes for Everyone</h2>
@@ -254,7 +254,7 @@ const Home = () => {
           <div className="rent-card-image">
             <img src={img2} alt="rent picture" />
           </div>
-          <Fade duration="2000" direction="left">
+          <Fade triggerOnce duration="2000" direction="left">
             <div className="rent-r-card-text">
               <h5>BUY PLOTS/LAND</h5>
               <h2>Residential & Commercial Plots/Land</h2>
