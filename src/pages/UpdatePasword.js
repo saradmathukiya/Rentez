@@ -34,7 +34,7 @@ const UpdatePasword = () => {
       <form className="my-form" onSubmit={handleSubmit(submitPasswordForm)}>
         <div className="my-form-inner">
           <h2 className="text-lg font-semibold text-richblack-5">Password</h2>
-          <div className="flex flex-col gap-5 lg:flex-row">
+          <div className="update-pass-input-field flex flex-col gap-5 lg:flex-row">
             <div className="form-input-group relative flex flex-col gap-2 lg:w-[48%]">
               <label htmlFor="oldPassword" className="label-style">
                 Current Password

@@ -127,6 +127,69 @@
 
       }
 
+
+
+      /* profile page */
+
+      .profile-card {
+        padding: 15px;
+      }
+    
+      .profile-info-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    
+      .profile-info-container img {
+        width: 70px;
+      }
+    
+      .profile-details {
+        flex-direction: column;
+        gap: 5px;
+      }
+    
+      .profile-details p {
+        margin: 0;
+        font-size: 16px;
+      }
+    
+      .profile-section {
+        gap: 20px;
+      }
+    
+      .details-container {
+        padding: 10px;
+        gap: 10px;
+      }
+    
+      .personal-details {
+        /* flex-direction: column; */
+        gap: 10px;
+      }
+    
+      /* .detail {
+        flex-basis: 100%;
+      } */
+    
+      .label {
+        font-size: 14px;
+      }
+    
+      .value {
+        font-size: 16px;
+      }
+    
+      .profile-line {
+        width: 100%;
+      }
+
+
+
+
+      
+
      
 }
 
@@ -390,4 +453,205 @@
     .partition2 {
       display: none;
     }
+
+    
+
+
+    /* profile page */
+
+    .profile-card {
+      padding: 10px;
+    }
+  
+    .profile-info-container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .profile-info-container img {
+      width: 60px;
+    }
+  
+    .profile-details {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .profile-details p {
+      margin: 0;
+      font-size: 14px;
+    }
+  
+    .profile-section {
+      gap: 20px;
+    }
+  
+    .details-container {
+      padding: 10px;
+      gap: 10px;
+    }
+  
+    .personal-details {
+      /* flex-direction: column; */
+      gap: 10px;
+    }
+  
+    /* .detail {
+      flex-basis: 100%;
+    } */
+  
+    .label {
+      font-size: 12px;
+    }
+  
+    .value {
+      font-size: 14px;
+    }
+  
+    .profile-line {
+      width: 100%;
+    }
+
+
+    /* settings page */
+
+    .edit-profile-picture img {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .edit-profile-picture p {
+      font-size: 12px;
+    }
+  
+    .edit-profile-picture input[type="file"] {
+      display: none;
+    }
+  
+    .edit-profile-detail .profile-edit-button,
+    .edit-profile-detail .special-btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  
+    .edit-profile-details {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .edit-profile-details-column {
+      margin-right: 0;
+    }
+  
+    .edit-profile-detail-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .my-form {
+      padding: 6px;
+      gap: 4px;
+    }
+  
+    .my-form h2 {
+      font-size: 1rem;
+    }
+  
+    .form-style {
+      width: 100%;
+      padding: 6px;
+      font-size: 14px;
+    }
+  
+    .update-btn,
+    .cancel-btn {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  
+    .delete-account-container {
+      padding: 16px;
+      gap: 16px;
+    }
+  
+    .delete-account-icon {
+      height: 30px;
+      width: 40px;
+    }
+  
+    .delete-account-icon svg {
+      font-size: 1.25rem;
+    }
+  
+    .delete-account-title {
+      font-size: 1rem;
+    }
+  
+    .delete-account-description {
+      width: 100%;
+    }
+  
+    .delete-account-button {
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    /* update password in settings page*/
+
+  
+
+    .update-pass-input-field{
+      /* gap: 5px; */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .my-form-inner {
+      gap: 0.5rem;
+    }
+  
+    .flex-col-lg-row {
+      flex-direction: column;
+    }
+  
+    .form-input-group {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .label-style {
+      font-size: 12px;
+    }
+  
+    .form-style {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .show-password-icon {
+      top: 34px;
+    }
+  
+    .text-warning {
+      font-size: 12px;
+    }
+  
+    .btn-group {
+      margin-right: 0;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .cancel-btn {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    .update-btn {
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+    
+  
 }
