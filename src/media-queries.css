@@ -975,6 +975,11 @@
       font-size: 0.875rem;
     }
 
+    .founder-image img{
+      height: 300px;
+      width: 350px;
+    }
+
 
 
     /* plans */
@@ -1012,6 +1017,32 @@
     }
     .feature-text{
       font-size: 15px;
+    }
+
+
+
+    /* create listing */
+    .create-listing-wrapper {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .create-listing-wrapper h1 {
+      font-size: 1.5rem;
+      padding: 10px 0;
+    }
+  
+    .create-listing-data label {
+      font-size: medium;
+      gap: 5px;
+    }
+  
+    .create-listing-data label input,
+    textarea,
+    select {
+      font-size: medium;
+      padding: 10px 0;
+      border-radius: 10px;
     }
     
   
