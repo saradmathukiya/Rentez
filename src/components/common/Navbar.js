@@ -111,25 +111,25 @@ function Navbar() {
               </Link>
             )}
             {token !== null && (
-              <Link to={"/"}>
-                <button
-                  className="profile-button flex "
-                  onClick={() => {
-                    setOpen(!open);
-                  }}
-                >
-                  <div className="profilepic">
-                    <img
-                      src={user?.image}
-                      alt={`profile-${user?.firstName}`}
-                      className=""
-                    />
-                  </div>
-                  <div className="menu-button">
-                    <IoMdMenu />
-                  </div>
-                </button>
-              </Link>
+              // <Link to={"/"}>
+              <button
+                className="profile-button flex "
+                onClick={() => {
+                  setOpen(!open);
+                }}
+              >
+                <div className="profilepic">
+                  <img
+                    src={user?.image}
+                    alt={`profile-${user?.firstName}`}
+                    className=""
+                  />
+                </div>
+                <div className="menu-button">
+                  <IoMdMenu />
+                </div>
+              </button>
+              // </Link>
             )}
           </div>
         </div>

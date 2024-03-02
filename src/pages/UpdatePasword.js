@@ -102,7 +102,7 @@ const UpdatePasword = () => {
           >
             Cancel
           </button>
-          <IconBtn type="submit" text="Update" className="update-btn" />
+          <IconBtn id="update-btn" type="submit" text="Update" />
         </div>
       </form>
     </>
