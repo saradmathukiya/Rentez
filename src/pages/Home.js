@@ -29,10 +29,10 @@ const Home = () => {
       console.log(result);
       if (result) {
         setProperties(result);
+        setLoading(false);
       }
     };
     getProperty();
-    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -146,41 +146,63 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="slider-container ">
-          <Slider
-            ref={(slider) => {
-              sliderRef = slider;
-            }}
-            {...settings}
-          >
-            {properties?.map((property, index) => {
-              return (
-                <Card
-                  key={index}
-                  isSeller={false}
-                  propertyId={property._id}
-                  img={property.thumbnail}
-                  bhk={property.bhk}
-                  bath={property.bathrooms}
-                  size={property.size}
-                  price={property.price}
-                  pricePer={property.pricePer}
-                  city={property.city}
-                  state={property.state}
-                  type={property.propertyType}
-                />
-              );
-            })}
-          </Slider>
-          <div style={{ textAlign: "center" }} className="slider-btn-homepage">
-            <button className="button" onClick={previous}>
-              Previous
-            </button>
-            <button className="button" onClick={next}>
-              Next
-            </button>
-          </div>
-        </div>
+
+          {
+            loading ? (
+              <div className="my-listings-wrapper">
+                {Array.from({ length: 3 }).map((_, index) => (
+                  <div className='skeleton-loader' key={index}>
+                    <div className='skeleton-loader-wrapper'>
+                      <div className='skeleton-loader-circle'></div>
+                      <div className='line-1'></div>
+                      <div className='line-2'></div>
+                      <div className='line-3'></div>
+                      <iv className='line-3a'></iv>
+                      <div className='line-4'></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+                ) : (
+                  <div className="slider-container ">
+                    <Slider
+                      ref={(slider) => {
+                        sliderRef = slider;
+                      }}
+                      {...settings}
+                    >
+                      {properties?.map((property, index) => {
+                        return (
+                          <Card
+                            key={index}
+                            isSeller={false}
+                            propertyId={property._id}
+                            img={property.thumbnail}
+                            bhk={property.bhk}
+                            bath={property.bathrooms}
+                            size={property.size}
+                            price={property.price}
+                            pricePer={property.pricePer}
+                            city={property.city}
+                            state={property.state}
+                            type={property.propertyType}
+                          />
+                        );
+                      })}
+                    </Slider>
+                    <div style={{ textAlign: "center" }} className="slider-btn-homepage">
+                      <button className="button" onClick={previous}>
+                        Previous
+                      </button>
+                      <button className="button" onClick={next}>
+                        Next
+                      </button>
+                    </div>
+                  </div>
+                )
+            }
+
+        
       </section>
 
       <section className="whyrentez-section">
