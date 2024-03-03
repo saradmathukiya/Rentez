@@ -21,10 +21,10 @@ const Properties = () => {
       console.log(result);
       if (result) {
         setProperties(result);
+        setLoading(false);
       }
     };
     getProperty();
-    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterData]);
 
@@ -32,7 +32,20 @@ const Properties = () => {
     <div className="mylisting-container">
       <div className="my-listings-wrapper">
         {loading ? (
-          <span className="loader"></span>
+          <>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div className="skeleton-loader" key={index}>
+              <div className="skeleton-loader-wrapper">
+                <div className="skeleton-loader-circle"></div>
+                <div className="line-1"></div>
+                <div className="line-2"></div>
+                <div className="line-3"></div>
+                <div className="line-3a"></div>
+                <div className="line-4"></div>
+              </div>
+            </div>
+          ))}
+        </>
         ) : (
           <>
             <div className="my-listings">
