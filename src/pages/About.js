@@ -18,10 +18,10 @@ const About = () => {
           <header class="header">
             Driving Innovation in Reting Industry
             <p class="subheader">
-              Studynotion is at the forefront of driving innovation in online
-              education. We're passionate about creating a brighter future by
-              offering cutting-edge courses, leveraging emerging technologies,
-              and nurturing a vibrant learning community.
+              Rentez is at the forefront of driving innovation in online
+              renting. We're passionate about creating a brighter future by
+              offering cutting-edge rents, leveraging emerging technologies, and
+              nurturing a vibrant renting community.
             </p>
           </header>
           <div class="spacer"></div>
