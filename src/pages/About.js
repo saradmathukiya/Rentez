@@ -55,7 +55,7 @@ const About = () => {
                 Drawing from our own experiences and observations, we set out to
                 build a platform that would not only benefit our users but also
                 contribute to a more sustainable future. We can make a positive
-                impact on the world around us.
+                impact on the world around us!.
               </p>
             </div>
             <div class="founder-image">
