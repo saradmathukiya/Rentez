@@ -82,7 +82,9 @@ export default function FilterModal({ modalData }) {
                 type="checkbox"
                 id={0o1}
               />
-              <label htmlFor={0o1}>Flat</label>
+              <label htmlFor={0o1} 
+              className={filters.propertyType?.includes("Flat") ? "checked" : ""}
+              >Flat</label>
               <input
                 defaultValue={2}
                 name="r"
@@ -91,7 +93,9 @@ export default function FilterModal({ modalData }) {
                 checked={filters.propertyType?.includes("Bunglow")}
                 onChange={() => handlePropertyTypeChange("Bunglow")}
               />
-              <label htmlFor={0o2}>Bunglow</label>
+              <label htmlFor={0o2}
+              className={filters.propertyType?.includes("Bunglow") ? "checked" : ""}
+              >Bunglow</label>
               <input
                 defaultValue={3}
                 name="r"
@@ -100,7 +104,9 @@ export default function FilterModal({ modalData }) {
                 checked={filters.propertyType?.includes("Farmhouse")}
                 onChange={() => handlePropertyTypeChange("Farmhouse")}
               />
-              <label htmlFor={0o3}>Farmhouse</label>
+              <label htmlFor={0o3}
+              className={filters.propertyType?.includes("Farmhouse") ? "checked" : ""}
+              >Farmhouse</label>
               <input
                 defaultValue={3}
                 name="r"
@@ -109,7 +115,9 @@ export default function FilterModal({ modalData }) {
                 checked={filters.propertyType?.includes("Villa")}
                 onChange={() => handlePropertyTypeChange("Villa")}
               />
-              <label htmlFor={0o4}>Villa</label>
+              <label htmlFor={0o4}
+              className={filters.propertyType?.includes("Villa") ? "checked" : ""}
+              >Villa</label>
               <input
                 defaultValue={3}
                 name="r"
@@ -118,7 +126,9 @@ export default function FilterModal({ modalData }) {
                 checked={filters.propertyType?.includes("Land")}
                 onChange={() => handlePropertyTypeChange("Land")}
               />
-              <label htmlFor={0o5}>Land</label>
+              <label htmlFor={0o5}
+              className={filters.propertyType?.includes("Land") ? "checked" : ""}
+              >Land</label>
             </div>
           </div>
           <hr />
@@ -186,7 +196,7 @@ export default function FilterModal({ modalData }) {
                 onChange={(e) => handleFilterChange("state", e.target.value)}
               />
             </label>
-            <hr />
+            {/* <hr /> */}
             <div className="filter-button">
               <button
                 className="clear-filter-btn"
